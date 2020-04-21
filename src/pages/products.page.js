@@ -12,14 +12,14 @@ import ProductCard from "../components/Cards/productCard.component";
 import AddNew from "../components/Cards/addNewCard.component";
 import RightForm from "../components/Forms/rightForm.component";
 import { PRODUCTS } from "../data/products";
-import { drawerWidth } from "../styles/theme";
+import { rightDrawerWidth } from "../styles/theme";
 
 const ProductsPage = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <Box>
-      <div style={{ marginRight: `${open ? `${drawerWidth}px` : "0"}` }}>
+      <div style={{ marginRight: `${open ? `${rightDrawerWidth}px` : "0"}` }}>
         <ExpansionPanel>
           <ExpansionPanelSummary
             expandIcon={<ExpandMoreIcon fontSize="large" />}

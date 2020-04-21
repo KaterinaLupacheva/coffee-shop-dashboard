@@ -29,3 +29,5 @@ const theme = createMuiTheme({
 export default theme;
 
 export const drawerWidth = 240;
+
+export const rightDrawerWidth = 300;
