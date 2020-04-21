@@ -1,37 +1,29 @@
 import React from "react";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import PeopleIcon from "@material-ui/icons/People";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import * as ROUTES from "../pages/routes";
 
-export const menuListItems = (
-  <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Employees" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingBasketIcon />
-      </ListItemIcon>
-      <ListItemText primary="Products" />
-    </ListItem>
-  </div>
-);
+export const MENU_LIST_ITEMS = [
+  {
+    name: "Dashboard",
+    icon: <DashboardIcon />,
+    route: ROUTES.DASHBOARD,
+  },
+  {
+    name: "Orders",
+    icon: <ShoppingCartIcon />,
+    route: ROUTES.ORDERS,
+  },
+  {
+    name: "Employees",
+    icon: <PeopleIcon />,
+    route: ROUTES.EMPLOYEES,
+  },
+  {
+    name: "Products",
+    icon: <ShoppingBasketIcon />,
+    route: ROUTES.PRODUCTS,
+  },
+];
