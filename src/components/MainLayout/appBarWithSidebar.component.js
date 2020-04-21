@@ -4,7 +4,6 @@ import { appBarWithSidebarStyles } from "./appBarWithSidebar.styles";
 import Sidebar from "./sidebar.component";
 import TopAppBar from "./topAppBar.component";
 import {
-  CssBaseline,
   Grid,
   Box,
   Typography,
@@ -26,7 +25,6 @@ const AppBarWithSidebar = ({ children }) => {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
       <TopAppBar open={open} handleDrawerOpen={handleDrawerOpen} />
       <Sidebar open={open} handleDrawerClose={handleDrawerClose} />
       <main className={classes.content}>
