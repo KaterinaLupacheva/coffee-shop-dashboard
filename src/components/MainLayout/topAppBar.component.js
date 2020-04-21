@@ -9,7 +9,7 @@ import {
   Typography,
   Badge
 } from "@material-ui/core";
-import NotificationsIcon from "@material-ui/icons/Notifications";
+import LocalCafeRoundedIcon from '@material-ui/icons/LocalCafeRounded';
 import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(topAppBarStyles);
@@ -43,7 +43,7 @@ const TopAppBar = ({ open, handleDrawerOpen }) => {
         </Typography>
         <IconButton color="inherit">
           <Badge badgeContent={4} color="secondary">
-            <NotificationsIcon />
+            <LocalCafeRoundedIcon />
           </Badge>
         </IconButton>
       </Toolbar>
