@@ -10,19 +10,19 @@ import {
   Button,
   Typography,
   Divider,
-  Tooltip,
+  Tooltip
 } from "@material-ui/core";
 import FreeBreakfastOutlinedIcon from "@material-ui/icons/FreeBreakfastOutlined";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 
 const useStyles = makeStyles(productCardStyles);
 
-const ProductCard = ({ item, ...otherProps }) => {
+const ProductCard = ({ item, openForm, ...otherProps }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea onClick={openForm}>
         <CardMedia
           className={classes.media}
           image={require(`../../assets/images/${item.photo}.jpg`)}
