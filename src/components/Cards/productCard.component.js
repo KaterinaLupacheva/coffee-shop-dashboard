@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {productCardStyles } from './productCard.styles';
+import { productCardStyles } from "./productCard.styles";
 import {
   Card,
   CardActionArea,
@@ -9,7 +9,8 @@ import {
   CardMedia,
   Button,
   Typography,
-  Divider
+  Divider,
+  Tooltip,
 } from "@material-ui/core";
 import FreeBreakfastOutlinedIcon from "@material-ui/icons/FreeBreakfastOutlined";
 import ListAltIcon from "@material-ui/icons/ListAlt";
@@ -35,13 +36,17 @@ const ProductCard = ({ item, ...otherProps }) => {
       </CardActionArea>
       <Divider />
       <CardActions className={classes.actions}>
-        <Button size="small" color="primary">
-          <FreeBreakfastOutlinedIcon />
-          &nbsp; {item.price}
-        </Button>
-        <Button size="small" color="primary">
-          <ListAltIcon /> {item.orders}
-        </Button>
+        <Tooltip title={"price per unit"}>
+          <Button size="small" color="primary">
+            <FreeBreakfastOutlinedIcon />
+            &nbsp; {item.price}
+          </Button>
+        </Tooltip>
+        <Tooltip title={"today orders"}>
+          <Button size="small" color="primary">
+            <ListAltIcon /> {item.orders}
+          </Button>
+        </Tooltip>
       </CardActions>
     </Card>
   );

@@ -15,42 +15,42 @@ export const PRODUCTS = [
     name: "Turkish Coffee",
     price: "$3.75",
     photo: "turkish",
-    orders: 18
+    orders: 16
   },
   {
     name: "Coffee Decaf",
     price: "$2.00",
     photo: "decaf",
-    orders: 18
+    orders: 5
   },
   {
     name: "Cappuccino",
     price: "$3.50",
     photo: "cappuccino",
-    orders: 18
+    orders: 34
   },
   {
     name: "Latte Cafe",
     price: "$3.50",
     photo: "latte",
-    orders: 18
+    orders: 24
   },
   {
     name: "Latte Flavored",
     price: "$4.00",
     photo: "flavored",
-    orders: 18
+    orders: 15
   },
   {
     name: "Hot Tea",
     price: "$1.75",
     photo: "tea",
-    orders: 18
+    orders: 19
   },
   {
     name: "Hot Chocolate",
     price: "$3.25",
     photo: "chocolate",
-    orders: 18
+    orders: 9
   }
 ];
