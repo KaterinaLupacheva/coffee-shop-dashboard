@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { appBarWithSidebarStyles } from "./appBarWithSidebar.styles";
 import Sidebar from "./sidebar.component";
 import TopAppBar from "./topAppBar.component";
 import {
@@ -8,24 +9,10 @@ import {
   Box,
   Typography,
   Link,
-  Container,
+  Container
 } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  appBarSpacer: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    height: "100vh",
-    overflow: "auto",
-  },
-  container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-  },
-}));
+const useStyles = makeStyles(appBarWithSidebarStyles);
 
 const AppBarWithSidebar = ({ children }) => {
   const classes = useStyles();

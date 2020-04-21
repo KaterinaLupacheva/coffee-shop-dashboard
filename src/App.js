@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import AppBarWithSidebar from './components/appBarWithSidebar.component';
+import React from "react";
+import "./App.css";
+import AppBarWithSidebar from "./components/MainLayout/appBarWithSidebar.component";
 
 function App() {
   return (
