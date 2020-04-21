@@ -9,21 +9,21 @@ export const MENU_LIST_ITEMS = [
   {
     name: "Dashboard",
     icon: <DashboardIcon />,
-    route: ROUTES.DASHBOARD,
+    route: ROUTES.DASHBOARD
   },
   {
     name: "Orders",
     icon: <ShoppingCartIcon />,
-    route: ROUTES.ORDERS,
+    route: ROUTES.ORDERS
   },
   {
     name: "Employees",
     icon: <PeopleIcon />,
-    route: ROUTES.EMPLOYEES,
+    route: ROUTES.EMPLOYEES
   },
   {
     name: "Products",
     icon: <ShoppingBasketIcon />,
-    route: ROUTES.PRODUCTS,
-  },
+    route: ROUTES.PRODUCTS
+  }
 ];

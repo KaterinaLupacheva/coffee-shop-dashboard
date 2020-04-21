@@ -9,7 +9,7 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  ListItemText,
+  ListItemText
 } from "@material-ui/core";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { MENU_LIST_ITEMS } from "../../data/menuItems";
@@ -29,7 +29,7 @@ const Sidebar = ({ open, handleDrawerClose }) => {
     <Drawer
       variant="permanent"
       classes={{
-        paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+        paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose)
       }}
       open={open}
     >
@@ -47,11 +47,14 @@ const Sidebar = ({ open, handleDrawerClose }) => {
             component={Link}
             to={item.route}
             selected={id === selectedIndex}
-            onClick={(event) => handleSelect(event, id)}
+            onClick={event => handleSelect(event, id)}
             classes={{ selected: classes.selected }}
           >
             <ListItemIcon>{item.icon}</ListItemIcon>
-            <ListItemText primary={item.name} />
+            <ListItemText
+              primary={item.name}
+              primaryTypographyProps={{ variant: "h5" }}
+            />
           </ListItem>
         ))}
       </List>

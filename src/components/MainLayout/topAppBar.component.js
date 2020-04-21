@@ -9,7 +9,7 @@ import {
   Typography,
   Badge
 } from "@material-ui/core";
-import LocalCafeRoundedIcon from '@material-ui/icons/LocalCafeRounded';
+import LocalCafeRoundedIcon from "@material-ui/icons/LocalCafeRounded";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(topAppBarStyles);

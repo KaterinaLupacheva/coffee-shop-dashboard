@@ -3,13 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { appBarWithSidebarStyles } from "./appBarWithSidebar.styles";
 import Sidebar from "./sidebar.component";
 import TopAppBar from "./topAppBar.component";
-import {
-  Grid,
-  Box,
-  Typography,
-  Link,
-  Container
-} from "@material-ui/core";
+import { Grid, Box, Typography, Link, Container } from "@material-ui/core";
 
 const useStyles = makeStyles(appBarWithSidebarStyles);
 
