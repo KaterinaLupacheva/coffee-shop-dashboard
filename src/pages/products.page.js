@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import ProductCard from "../components/Cards/productCard.component";
+import AddNew from "../components/Cards/addNewCard.component";
 import { PRODUCTS } from "../data/products";
 
 const ProductsPage = () => {
@@ -11,6 +12,7 @@ const ProductsPage = () => {
           <ProductCard item={item} />
         </Grid>
       ))}
+      <AddNew />
     </>
   );
 };

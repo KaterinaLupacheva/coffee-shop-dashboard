@@ -1,13 +1,13 @@
-export const productCardStyles = (theme) => ({
+export const productCardStyles = theme => ({
   root: {
     maxWidth: 345,
-    backgroundColor: theme.palette.background.card,
+    backgroundColor: theme.palette.background.card
   },
   media: {
-    height: 180,
+    height: 180
   },
   actions: {
     display: "flex",
-    justifyContent: "space-between",
-  },
+    justifyContent: "space-between"
+  }
 });
