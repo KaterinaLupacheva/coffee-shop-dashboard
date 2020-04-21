@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import {productCardStyles } from './productCard.styles';
 import {
   Card,
   CardActionArea,
@@ -13,19 +14,7 @@ import {
 import FreeBreakfastOutlinedIcon from "@material-ui/icons/FreeBreakfastOutlined";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    maxWidth: 345,
-    backgroundColor: theme.palette.background.card
-  },
-  media: {
-    height: 180
-  },
-  actions: {
-    display: "flex",
-    justifyContent: "space-between"
-  }
-}));
+const useStyles = makeStyles(productCardStyles);
 
 const ProductCard = ({ item, ...otherProps }) => {
   const classes = useStyles();
