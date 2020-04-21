@@ -20,37 +20,37 @@ export const PRODUCTS = [
   {
     name: "Coffee Decaf",
     price: "$2.00",
-    photo: "americano",
+    photo: "decaf",
     orders: 18
   },
   {
     name: "Cappuccino",
     price: "$3.50",
-    photo: "americano",
+    photo: "cappuccino",
     orders: 18
   },
   {
     name: "Latte Cafe",
     price: "$3.50",
-    photo: "americano",
+    photo: "latte",
     orders: 18
   },
   {
     name: "Latte Flavored",
     price: "$4.00",
-    photo: "americano",
+    photo: "flavored",
     orders: 18
   },
   {
     name: "Hot Tea",
     price: "$1.75",
-    photo: "americano",
+    photo: "tea",
     orders: 18
   },
   {
     name: "Hot Chocolate",
     price: "$3.25",
-    photo: "americano",
+    photo: "chocolate",
     orders: 18
   }
 ];
