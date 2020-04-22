@@ -16,6 +16,7 @@ const RightForm = ({ open, handleClose, data }) => {
   const classes = useStyles();
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
+  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     setName(data.name);
@@ -58,10 +59,20 @@ const RightForm = ({ open, handleClose, data }) => {
             Upload Image
           </Button>
         </label>
-        <FormControlLabel
-          control={<Switch color="primary" />}
-          label="On sale"
-        />
+        <Box>
+          <FormControlLabel
+            onChange={() => setDisabled(false)}
+            control={<Switch color="primary" />}
+            label="On sale"
+          />
+          <TextField
+            disabled={disabled}
+            size="small"
+            variant="outlined"
+            placeholder="-20%"
+            className={classes.saleField}
+          />
+        </Box>
         <Box className={classes.buttons} onClick={handleClose}>
           <Button variant="contained">Save</Button>
           <Button variant="contained" className={classes.actionButton}>

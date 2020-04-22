@@ -40,6 +40,9 @@ export const rightFormStyles = (theme) => ({
     padding: theme.spacing(3),
     paddingBottom: 0,
   },
+  saleField: {
+    width: "30%",
+  },
   button: {
     // margin: theme.spacing(5)
   },
