@@ -1,8 +1,8 @@
 import React from "react";
 import DashboardIcon from "@material-ui/icons/Dashboard";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import PeopleIcon from "@material-ui/icons/People";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import ListAltIcon from "@material-ui/icons/ListAlt";
 import * as ROUTES from "../pages/routes";
 
 export const MENU_LIST_ITEMS = [
@@ -13,7 +13,7 @@ export const MENU_LIST_ITEMS = [
   },
   {
     name: "Orders",
-    icon: <ShoppingCartIcon />,
+    icon: <ListAltIcon />,
     route: ROUTES.ORDERS
   },
   {

@@ -7,6 +7,7 @@ export const productPageStyles = theme => ({
     }
   },
   panel: {
-    marginTop: "30px"
+    marginTop: "30px",
+    background: theme.palette.background.default,
   }
 });

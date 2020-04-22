@@ -6,7 +6,7 @@ import {
   Button,
   FormControlLabel,
   Switch,
-  Box
+  Box,
 } from "@material-ui/core";
 import { rightFormStyles } from "./rightForm.styles";
 
@@ -31,7 +31,7 @@ const RightForm = ({ open, handleClose, data }) => {
           id="outlined-basic"
           placeholder="Name"
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           variant="outlined"
           className={classes.field}
         />
@@ -39,7 +39,7 @@ const RightForm = ({ open, handleClose, data }) => {
           id="outlined-basic"
           placeholder="Price"
           value={price}
-          onChange={e => setPrice(e.target.value)}
+          onChange={(e) => setPrice(e.target.value)}
           variant="outlined"
           className={classes.field}
         />
@@ -75,12 +75,8 @@ const RightForm = ({ open, handleClose, data }) => {
         </Box>
         <Box className={classes.buttons} onClick={handleClose}>
           <Button variant="contained">Save</Button>
-          <Button variant="contained" className={classes.actionButton}>
-            Cancel
-          </Button>
-          <Button variant="contained" className={classes.actionButton}>
-            Delete
-          </Button>
+          <Button variant="contained">Cancel</Button>
+          <Button variant="contained">Delete</Button>
         </Box>
       </form>
     </div>
