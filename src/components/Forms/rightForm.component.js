@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import {
@@ -14,6 +14,8 @@ const useStyles = makeStyles(rightFormStyles);
 
 const RightForm = ({ open, handleClose }) => {
   const classes = useStyles();
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
   return (
     <div
       className={clsx(classes.drawerPaper, !open && classes.drawerPaperClose)}
@@ -22,12 +24,16 @@ const RightForm = ({ open, handleClose }) => {
         <TextField
           id="outlined-basic"
           placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           variant="outlined"
           className={classes.field}
         />
         <TextField
           id="outlined-basic"
           placeholder="Price"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
           variant="outlined"
           className={classes.field}
         />

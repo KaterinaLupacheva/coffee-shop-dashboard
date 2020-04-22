@@ -38,7 +38,7 @@ const ProductsPage = () => {
                   <ProductCard item={item} openForm={() => setOpen(true)} />
                 </Grid>
               ))}
-              <AddNew />
+              <AddNew openForm={() => setOpen(true)}/>
             </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>

@@ -5,18 +5,18 @@ import {
   Card,
   CardActionArea,
   CardContent,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import AddSharpIcon from "@material-ui/icons/AddSharp";
 import { addNewCardStyles } from "./addNewCard.styles";
 
 const useStyles = makeStyles(addNewCardStyles);
 
-const AddNew = () => {
+const AddNew = ({ openForm }) => {
   const classes = useStyles();
   return (
     <Grid item xs={12} sm={6} md={3}>
-      <Card className={classes.root}>
+      <Card className={classes.root} onClick={openForm}>
         <CardActionArea>
           <CardContent className={classes.content}>
             <AddSharpIcon fontSize="large" />
