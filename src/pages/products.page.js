@@ -21,6 +21,10 @@ const useStyles = makeStyles(productPageStyles);
 const ProductsPage = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [data, setData] = useState({
+    name: "",
+    price: "",
+  });
 
   return (
     <Box className={classes.container}>
@@ -35,15 +39,25 @@ const ProductsPage = () => {
             <Grid container spacing={3}>
               {PRODUCTS.map((item, id) => (
                 <Grid item xs={12} sm={6} md={3} key={id}>
-                  <ProductCard item={item} openForm={() => setOpen(true)} />
+                  <ProductCard
+                    item={item}
+                    openForm={() => {
+                      setOpen(true);
+                      setData({
+                        ...data,
+                        name: item.name,
+                        price: item.price,
+                      });
+                    }}
+                  />
                 </Grid>
               ))}
-              <AddNew openForm={() => setOpen(true)}/>
+              <AddNew openForm={() => setOpen(true)} />
             </Grid>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
-      <RightForm open={open} handleClose={() => setOpen(false)} />
+      <RightForm open={open} handleClose={() => setOpen(false)} data={data} />
     </Box>
   );
 };

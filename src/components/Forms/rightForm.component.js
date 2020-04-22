@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import {
@@ -12,10 +12,15 @@ import { rightFormStyles } from "./rightForm.styles";
 
 const useStyles = makeStyles(rightFormStyles);
 
-const RightForm = ({ open, handleClose }) => {
+const RightForm = ({ open, handleClose, data }) => {
   const classes = useStyles();
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
+
+  useEffect(() => {
+    setName(data.name);
+    setPrice(data.price);
+  }, [data]);
   return (
     <div
       className={clsx(classes.drawerPaper, !open && classes.drawerPaperClose)}
