@@ -12,6 +12,8 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ProductCard from "../components/Cards/productCard.component";
 import AddNew from "../components/Cards/addNewCard.component";
 import RightForm from "../components/Forms/rightForm.component";
+import EmojiFoodBeverageIcon from "@material-ui/icons/EmojiFoodBeverage";
+import CakeIcon from "@material-ui/icons/Cake";
 import { PRODUCTS } from "../data/products";
 import { rightDrawerWidth } from "../styles/theme";
 import { productPageStyles } from "./productPage.styles";
@@ -33,11 +35,40 @@ const ProductsPage = () => {
           <ExpansionPanelSummary
             expandIcon={<ExpandMoreIcon fontSize="large" />}
           >
-            <Typography variant="h4">Hot Drinks</Typography>
+            <EmojiFoodBeverageIcon fontSize="large" color="primary" />
+            <Typography variant="h4">&nbsp; Hot Drinks</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container spacing={3}>
-              {PRODUCTS.map((item, id) => (
+              {PRODUCTS.drinks.map((item, id) => (
+                <Grid item xs={12} sm={6} md={3} key={id}>
+                  <ProductCard
+                    item={item}
+                    openForm={() => {
+                      setOpen(true);
+                      setData({
+                        ...data,
+                        name: item.name,
+                        price: item.price,
+                      });
+                    }}
+                  />
+                </Grid>
+              ))}
+              <AddNew openForm={() => setOpen(true)} />
+            </Grid>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <ExpansionPanel className={classes.panel}>
+          <ExpansionPanelSummary
+            expandIcon={<ExpandMoreIcon fontSize="large" />}
+          >
+            <CakeIcon fontSize="large" color="primary" />
+            <Typography variant="h4">&nbsp; Cakes</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Grid container spacing={3}>
+              {PRODUCTS.cakes.map((item, id) => (
                 <Grid item xs={12} sm={6} md={3} key={id}>
                   <ProductCard
                     item={item}

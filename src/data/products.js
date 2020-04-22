@@ -1,4 +1,5 @@
-export const PRODUCTS = [
+export const PRODUCTS = {
+  drinks: [
   {
     name: "Espresso",
     price: `$0.50`,
@@ -55,4 +56,13 @@ export const PRODUCTS = [
     photo: "chocolate",
     orders: 9
   }
-];
+],
+cakes: [
+  {
+    name: "Brownie",
+    price: "$5.75",
+    photo: "chocolate",
+    orders: 9
+  }
+]
+};

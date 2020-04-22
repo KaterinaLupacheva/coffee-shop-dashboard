@@ -6,4 +6,7 @@ export const productPageStyles = (theme) => ({
       alignItems: "center",
     },
   },
+  panel: {
+    marginTop: "30px"
+  }
 });
