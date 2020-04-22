@@ -10,7 +10,7 @@ import {
   Button,
   Typography,
   Divider,
-  Tooltip,
+  Tooltip
 } from "@material-ui/core";
 import FreeBreakfastOutlinedIcon from "@material-ui/icons/FreeBreakfastOutlined";
 import ListAltIcon from "@material-ui/icons/ListAlt";

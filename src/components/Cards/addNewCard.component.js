@@ -5,7 +5,7 @@ import {
   Card,
   CardActionArea,
   CardContent,
-  Typography,
+  Typography
 } from "@material-ui/core";
 import AddSharpIcon from "@material-ui/icons/AddSharp";
 import { addNewCardStyles } from "./addNewCard.styles";

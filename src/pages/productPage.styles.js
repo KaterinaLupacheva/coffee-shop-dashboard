@@ -1,10 +1,10 @@
-export const productPageStyles = (theme) => ({
+export const productPageStyles = theme => ({
   container: {
     display: "flex",
     [theme.breakpoints.down("xs")]: {
       justifyContent: "center",
-      alignItems: "center",
-    },
+      alignItems: "center"
+    }
   },
   panel: {
     marginTop: "30px"

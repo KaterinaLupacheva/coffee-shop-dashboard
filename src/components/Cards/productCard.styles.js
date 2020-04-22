@@ -1,15 +1,15 @@
-export const productCardStyles = (theme) => ({
+export const productCardStyles = theme => ({
   root: {
     maxWidth: 345,
     backgroundColor: theme.palette.background.card,
-    position: "relative",
+    position: "relative"
   },
   media: {
-    height: 180,
+    height: 180
   },
   actions: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   ribbon: {
     position: "absolute",
@@ -46,7 +46,7 @@ export const productCardStyles = (theme) => ({
         borderLeft: "3px solid transparent",
         borderRight: "3px solid #8f5408",
         borderBottom: "3px solid transparent",
-        borderTop: "3px solid #8f5408",
+        borderTop: "3px solid #8f5408"
       },
 
       "&::before": {
@@ -58,8 +58,8 @@ export const productCardStyles = (theme) => ({
         borderLeft: "3px solid #8f5408",
         borderBottom: "3px solid transparent",
         borderRottom: "3px solid transparent",
-        borderTop: "3px solid #8f5408",
-      },
-    },
-  },
+        borderTop: "3px solid #8f5408"
+      }
+    }
+  }
 });

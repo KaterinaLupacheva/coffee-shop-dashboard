@@ -6,7 +6,7 @@ import {
   ExpansionPanelSummary,
   ExpansionPanelDetails,
   Typography,
-  Box,
+  Box
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ProductCard from "../components/Cards/productCard.component";
@@ -25,7 +25,7 @@ const ProductsPage = () => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState({
     name: "",
-    price: "",
+    price: ""
   });
 
   return (
@@ -49,7 +49,7 @@ const ProductsPage = () => {
                       setData({
                         ...data,
                         name: item.name,
-                        price: item.price,
+                        price: item.price
                       });
                     }}
                   />
@@ -77,7 +77,7 @@ const ProductsPage = () => {
                       setData({
                         ...data,
                         name: item.name,
-                        price: item.price,
+                        price: item.price
                       });
                     }}
                   />
