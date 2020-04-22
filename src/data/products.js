@@ -3,7 +3,7 @@ export const PRODUCTS = [
     name: "Espresso",
     price: `$0.50`,
     photo: "espresso",
-    orders: 25
+    orders: 25,
   },
   {
     name: "Americano",
@@ -15,7 +15,8 @@ export const PRODUCTS = [
     name: "Turkish Coffee",
     price: "$3.75",
     photo: "turkish",
-    orders: 16
+    orders: 16,
+    sale: '-20%'
   },
   {
     name: "Coffee Decaf",
@@ -27,7 +28,8 @@ export const PRODUCTS = [
     name: "Cappuccino",
     price: "$3.50",
     photo: "cappuccino",
-    orders: 34
+    orders: 34,
+    sale: '-30%'
   },
   {
     name: "Latte Cafe",
@@ -39,7 +41,7 @@ export const PRODUCTS = [
     name: "Latte Flavored",
     price: "$4.00",
     photo: "flavored",
-    orders: 15
+    orders: 15,
   },
   {
     name: "Hot Tea",

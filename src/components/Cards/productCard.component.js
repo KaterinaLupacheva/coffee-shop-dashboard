@@ -22,6 +22,11 @@ const ProductCard = ({ item, openForm, ...otherProps }) => {
 
   return (
     <Card className={classes.root}>
+      {item.sale && (
+        <div className={classes.ribbon}>
+          <span>{`${item.sale}`}</span>
+        </div>
+      )}
       <CardActionArea onClick={openForm}>
         <CardMedia
           className={classes.media}
