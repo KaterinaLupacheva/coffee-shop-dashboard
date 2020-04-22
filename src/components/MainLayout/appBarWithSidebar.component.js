@@ -27,7 +27,7 @@ const AppBarWithSidebar = ({ children }) => {
           <Grid container spacing={3}>
             {children}
           </Grid>
-          <Box pt={4}>
+          <Box pt={4} className={classes.copyright}>
             <Copyright />
           </Box>
         </Container>
