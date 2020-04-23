@@ -48,15 +48,4 @@ export const rightFormStyles = (theme) => ({
     color: theme.palette.primary.main,
     fontWeight: "bold",
   },
-  buttons: {
-    display: "flex",
-    width: "100%",
-    justifyContent: "space-around",
-
-    "& button": {
-      background: theme.palette.background.card,
-      color: theme.palette.primary.main,
-      fontWeight: "bold",
-    },
-  },
 });

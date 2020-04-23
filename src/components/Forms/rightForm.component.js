@@ -8,6 +8,7 @@ import {
   Switch,
   Box,
 } from "@material-ui/core";
+import ActionButtons from "./actionButtons.component";
 import { rightFormStyles } from "./rightForm.styles";
 
 const useStyles = makeStyles(rightFormStyles);
@@ -73,11 +74,7 @@ const RightForm = ({ open, handleClose, data }) => {
             className={classes.saleField}
           />
         </Box>
-        <Box className={classes.buttons} onClick={handleClose}>
-          <Button variant="contained">Save</Button>
-          <Button variant="contained">Cancel</Button>
-          <Button variant="contained">Delete</Button>
-        </Box>
+        <ActionButtons handleClose={handleClose} />
       </form>
     </div>
   );
