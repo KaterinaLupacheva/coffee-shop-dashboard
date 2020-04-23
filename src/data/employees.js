@@ -5,7 +5,7 @@ export const EMPLOYEES = [
     location: "Phoenix, AZ",
     phone: "555-555-333",
     position: "Chief Baker",
-    photo: "jack"
+    photo: "jack",
   },
   {
     name: "Judi Dench",
@@ -13,43 +13,48 @@ export const EMPLOYEES = [
     location: "Pittsburgh, PA",
     phone: "555-666-222",
     position: "Administrator",
-    photo: "judi"
+    photo: "judi",
   },
   {
     name: "Joan Jett",
     email: "joan@coffee.com",
     location: "Birmingham, AL",
     phone: "554-879-312",
-    position: "Barista"
+    position: "Barista",
+    photo: "joan",
   },
   {
     name: "Charlize Theron",
     email: "charlize@coffee.com",
     location: "Austin, TX",
     phone: "552-777-321",
-    position: "Barista"
+    position: "Barista",
+    photo: "charlize",
   },
   {
     name: "Julia Roberts",
     email: "julia@coffee.com",
     location: "Denver, CO",
     phone: "558-321-444",
-    position: "Baker"
+    position: "Baker",
+    photo: "julia",
   },
   {
     name: "Sandra Bullock",
     email: "sandra@coffee.com",
     location: "Charleston, SC",
     phone: "555-888-245",
-    position: "Barista"
+    position: "Barista",
+    photo: "sandra",
   },
   {
     name: "Tom Hanks",
     email: "tom@coffee.com",
     location: "Memphis, TN",
     phone: "534-888-405",
-    position: "Barista"
-  }
+    position: "Barista",
+    photo: "tom",
+  },
 ];
 
 export const positions = ["Barista", "Baker", "Chief Baker", "Administrator"];
