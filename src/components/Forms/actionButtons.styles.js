@@ -7,7 +7,7 @@ export const actionButtonsStyles = theme => ({
     "& button": {
       background: theme.palette.background.card,
       color: theme.palette.primary.main,
-      fontWeight: "bold",
-    },
-  },
+      fontWeight: "bold"
+    }
+  }
 });

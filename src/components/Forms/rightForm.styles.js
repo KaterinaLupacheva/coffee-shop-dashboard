@@ -1,6 +1,6 @@
 import { rightDrawerWidth } from "../../styles/theme";
 
-export const rightFormStyles = (theme) => ({
+export const rightFormStyles = theme => ({
   appBarSpacer: theme.mixins.toolbar,
   drawerPaper: {
     position: "fixed",
@@ -10,7 +10,7 @@ export const rightFormStyles = (theme) => ({
     width: rightDrawerWidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
+      duration: theme.transitions.duration.enteringScreen
     }),
     backgroundColor: theme.palette.background.default,
     [theme.breakpoints.down("xs")]: {
@@ -18,34 +18,34 @@ export const rightFormStyles = (theme) => ({
       top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
-      margin: "5vh",
-    },
+      margin: "5vh"
+    }
   },
   drawerPaperClose: {
     overflowX: "hidden",
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
+      duration: theme.transitions.duration.leavingScreen
     }),
-    width: 0,
+    width: 0
   },
   root: {
     height: "80vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "space-evenly"
   },
   field: {
     padding: theme.spacing(3),
-    paddingBottom: 0,
+    paddingBottom: 0
   },
   saleField: {
-    width: "30%",
+    width: "30%"
   },
   button: {
     background: theme.palette.background.card,
     color: theme.palette.primary.main,
-    fontWeight: "bold",
-  },
+    fontWeight: "bold"
+  }
 });

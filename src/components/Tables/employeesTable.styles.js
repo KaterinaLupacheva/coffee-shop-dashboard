@@ -1,15 +1,15 @@
-export const employeesTableStyles = (theme) => ({
+export const employeesTableStyles = theme => ({
   root: {
-    width: "100%",
+    width: "100%"
   },
   head: {
     background: theme.palette.primary.main,
     color: theme.palette.text.white,
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   row: {
     "&:hover": {
-      cursor: "pointer",
-    },
-  },
+      cursor: "pointer"
+    }
+  }
 });

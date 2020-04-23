@@ -7,7 +7,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  Hidden,
+  Hidden
 } from "@material-ui/core";
 import Title from "./title";
 import { EMPLOYEES } from "../../data/employees";
@@ -57,7 +57,7 @@ const EmployeesTable = ({ history, match }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows.map(row => (
             <TableRow
               key={row.id}
               className={classes.row}

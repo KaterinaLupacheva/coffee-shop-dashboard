@@ -8,7 +8,7 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
+  Paper
 } from "@material-ui/core";
 import { employeeImageCardStyles } from "./employeeImageCard.styles";
 
@@ -18,7 +18,7 @@ const EmployeeImageCard = ({ profile }) => {
   const classes = useStyles();
   return (
     <Paper className={classes.container} elevation={5}>
-      <Card variant="outlined">
+      <Card className={classes.root}>
         <CardContent>
           <Box className={classes.imageName}>
             <CardMedia

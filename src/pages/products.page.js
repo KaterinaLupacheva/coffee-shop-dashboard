@@ -31,7 +31,7 @@ const ProductsPage = () => {
   return (
     <Box className={classes.container}>
       <div style={{ marginRight: `${open ? `${rightDrawerWidth}px` : "0"}` }}>
-        <ExpansionPanel className={classes.panel} elevation={5}> 
+        <ExpansionPanel className={classes.panel} elevation={5}>
           <ExpansionPanelSummary
             expandIcon={<ExpandMoreIcon fontSize="large" />}
           >
