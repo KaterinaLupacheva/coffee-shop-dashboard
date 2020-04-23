@@ -8,34 +8,41 @@ import {
   Button,
   Typography,
   Box,
+  Paper,
 } from "@material-ui/core";
-import {employeeImageCardStyles} from './employeeImageCard.styles';
+import { employeeImageCardStyles } from "./employeeImageCard.styles";
 
 const useStyles = makeStyles(employeeImageCardStyles);
 
 const EmployeeImageCard = ({ profile }) => {
-    const classes = useStyles();
+  const classes = useStyles();
   return (
-    <Card variant="outlined">
-      <CardContent>
-        <Box className={classes.imageName}>
-          <CardMedia
-            className={classes.media}
-            image={require(`../../assets/images/${profile.photo}.jpg`)}
-            title="Employee image"
-          />
-          <Typography variant="h5" component="h2">
-            {profile.name}
+    <Paper className={classes.container} elevation={5}>
+      <Card variant="outlined">
+        <CardContent>
+          <Box className={classes.imageName}>
+            <CardMedia
+              className={classes.media}
+              image={require(`../../assets/images/${profile.photo}.jpg`)}
+              title="Employee image"
+            />
+            <Typography variant="h5" component="h2">
+              {profile.name}
+            </Typography>
+          </Box>
+          <Typography
+            className={classes.pos}
+            color="textSecondary"
+            variant="body1"
+          >
+            {profile.position}
           </Typography>
-        </Box>
-        <Typography className={classes.pos} color="textSecondary" variant='body1'>
-          {profile.position}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Change Image</Button>
-      </CardActions>
-    </Card>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Change Image</Button>
+        </CardActions>
+      </Card>
+    </Paper>
   );
 };
 

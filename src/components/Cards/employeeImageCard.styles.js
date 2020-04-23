@@ -1,4 +1,7 @@
 export const employeeImageCardStyles = (theme) => ({
+  container: {
+    margin: theme.spacing(3),
+  },
   imageName: {
     display: "flex",
     flexDirection: "row",
@@ -6,8 +9,9 @@ export const employeeImageCardStyles = (theme) => ({
   },
   media: {
     height: 100,
-    borderRadius: "50%",
     width: 100,
+    borderRadius: "50%",
+    margin: theme.spacing(2)
   },
   pos: {
     marginTop: 12,

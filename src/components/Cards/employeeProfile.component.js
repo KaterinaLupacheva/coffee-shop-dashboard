@@ -11,11 +11,11 @@ const EmployeeProfile = ({ match }) => {
   const classes = useStyles();
   const profile = EMPLOYEES[match.params.employeeId];
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12} sm={4}  lg={3}>
+    <Grid container>
+      <Grid item xs={12} md={4} lg={4}>
         <EmployeeImageCard profile={profile} />
       </Grid>
-      <Grid item xs={12} sm={8}  lg={9}>
+      <Grid item xs={12} md={8} lg={8}>
         <EmployeeForm />
       </Grid>
     </Grid>
