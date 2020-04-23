@@ -4,7 +4,8 @@ export const EMPLOYEES = [
         email: 'jack@coffee.com',
         location: 'Phoenix, AZ',
         phone: '555-555-333',
-        position: 'Chief Baker'
+        position: 'Chief Baker',
+        photo: 'jack'
     },
     {
         name: 'Judi Dench',
