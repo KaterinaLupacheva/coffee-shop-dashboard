@@ -1,11 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { withRouter } from "react-router-dom";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Hidden,
+} from "@material-ui/core";
 import Title from "./title";
 import { EMPLOYEES } from "../../data/employees";
 import { employeesTableStyles } from "./employeesTable.styles";
@@ -46,8 +49,10 @@ const EmployeesTable = ({ history, match }) => {
           <TableRow>
             <TableCell className={classes.head}>Name</TableCell>
             <TableCell className={classes.head}>Email</TableCell>
-            <TableCell className={classes.head}>Location</TableCell>
-            <TableCell className={classes.head}>Phone</TableCell>
+            <Hidden xsDown>
+              <TableCell className={classes.head}>Location</TableCell>
+              <TableCell className={classes.head}>Phone</TableCell>
+            </Hidden>
             <TableCell className={classes.head}>Position</TableCell>
           </TableRow>
         </TableHead>
@@ -60,8 +65,10 @@ const EmployeesTable = ({ history, match }) => {
             >
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.email}</TableCell>
-              <TableCell>{row.location}</TableCell>
-              <TableCell>{row.phone}</TableCell>
+              <Hidden xsDown>
+                <TableCell>{row.location}</TableCell>
+                <TableCell>{row.phone}</TableCell>
+              </Hidden>
               <TableCell>{row.position}</TableCell>
             </TableRow>
           ))}
