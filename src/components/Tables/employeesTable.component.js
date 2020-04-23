@@ -7,6 +7,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Title from "./title";
 import { EMPLOYEES } from "../../data/employees";
+import { employeesTableStyles } from "./employeesTable.styles";
 
 const createData = (id, name, email, location, phone, position) => {
   return { id, name, email, location, phone, position };
@@ -31,13 +32,7 @@ const createRows = () => {
 
 const rows = createRows();
 
-const useStyles = makeStyles((theme) => ({
-  head: {
-    background: theme.palette.primary.main,
-    color: theme.palette.text.white,
-    fontWeight: "bold",
-  },
-}));
+const useStyles = makeStyles(employeesTableStyles);
 
 const EmployeesTable = () => {
   const classes = useStyles();
@@ -56,7 +51,11 @@ const EmployeesTable = () => {
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.id}>
+            <TableRow
+              key={row.id}
+              className={classes.row}
+              onClick={() => console.log("click " + row.id)}
+            >
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.email}</TableCell>
               <TableCell>{row.location}</TableCell>
