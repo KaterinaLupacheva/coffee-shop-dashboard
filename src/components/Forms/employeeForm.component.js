@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import { Paper, TextField, MenuItem } from "@material-ui/core";
+import { Paper, TextField, MenuItem, Divider } from "@material-ui/core";
 import ActionButtons from "./actionButtons.component";
 import { positions } from "../../data/employees";
 import { employeeFormStyles } from "./employeeForm.styles";
@@ -16,14 +16,14 @@ const EmployeeForm = ({ employee, history }) => {
     history.push("/employees");
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     if (event.target.name === "first_name") {
       const name = event.target.value
         .concat(" ")
         .concat(profile.name.split(" ")[1]);
       setProfile({
         ...profile,
-        name
+        name,
       });
     } else if (event.target.name === "last_name") {
       const name = profile.name
@@ -32,7 +32,7 @@ const EmployeeForm = ({ employee, history }) => {
         .concat(event.target.value);
       setProfile({
         ...profile,
-        name
+        name,
       });
     } else if (event.target.name === "city") {
       const location = event.target.value
@@ -40,7 +40,7 @@ const EmployeeForm = ({ employee, history }) => {
         .concat(profile.location.split(",")[1]);
       setProfile({
         ...profile,
-        location
+        location,
       });
     } else if (event.target.name === "state") {
       const location = profile.location
@@ -49,12 +49,12 @@ const EmployeeForm = ({ employee, history }) => {
         .concat(event.target.value);
       setProfile({
         ...profile,
-        location
+        location,
       });
     } else {
       setProfile({
         ...profile,
-        [event.target.name]: [event.target.value]
+        [event.target.name]: [event.target.value],
       });
     }
   };
@@ -69,11 +69,11 @@ const EmployeeForm = ({ employee, history }) => {
           variant="outlined"
           InputProps={{
             classes: {
-              input: classes.fieldFontSize
-            }
+              input: classes.fieldFontSize,
+            },
           }}
           value={profile.name.split(" ")[0]}
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
         />
         <TextField
           className={classes.field}
@@ -83,11 +83,11 @@ const EmployeeForm = ({ employee, history }) => {
           variant="outlined"
           InputProps={{
             classes: {
-              input: classes.fieldFontSize
-            }
+              input: classes.fieldFontSize,
+            },
           }}
           value={profile.name.split(" ")[1]}
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
         />
         <TextField
           className={classes.field}
@@ -97,11 +97,11 @@ const EmployeeForm = ({ employee, history }) => {
           variant="outlined"
           InputProps={{
             classes: {
-              input: classes.fieldFontSize
-            }
+              input: classes.fieldFontSize,
+            },
           }}
           value={profile.email}
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
         />
         <TextField
           className={classes.field}
@@ -111,11 +111,11 @@ const EmployeeForm = ({ employee, history }) => {
           variant="outlined"
           InputProps={{
             classes: {
-              input: classes.fieldFontSize
-            }
+              input: classes.fieldFontSize,
+            },
           }}
           value={profile.phone}
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
         />
         <TextField
           className={classes.field}
@@ -125,11 +125,11 @@ const EmployeeForm = ({ employee, history }) => {
           variant="outlined"
           InputProps={{
             classes: {
-              input: classes.fieldFontSize
-            }
+              input: classes.fieldFontSize,
+            },
           }}
           value={profile.location.split(",")[0]}
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
         />
         <TextField
           className={classes.field}
@@ -139,11 +139,11 @@ const EmployeeForm = ({ employee, history }) => {
           variant="outlined"
           InputProps={{
             classes: {
-              input: classes.fieldFontSize
-            }
+              input: classes.fieldFontSize,
+            },
           }}
           value={profile.location.split(",")[1]}
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
         />
         <TextField
           className={classes.field}
@@ -154,18 +154,19 @@ const EmployeeForm = ({ employee, history }) => {
           variant="outlined"
           InputProps={{
             classes: {
-              input: classes.fieldFontSize
-            }
+              input: classes.fieldFontSize,
+            },
           }}
           value={profile.position}
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
         >
-          {positions.map(pos => (
+          {positions.map((pos) => (
             <MenuItem key={pos} value={pos}>
               {pos}
             </MenuItem>
           ))}
         </TextField>
+        <Divider />
         <ActionButtons handleClose={handleClose} />
       </form>
     </Paper>

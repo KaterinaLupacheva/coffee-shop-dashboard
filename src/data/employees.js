@@ -12,7 +12,8 @@ export const EMPLOYEES = [
     email: "judi@coffee.com",
     location: "Pittsburgh, PA",
     phone: "555-666-222",
-    position: "Administrator"
+    position: "Administrator",
+    photo: "judi"
   },
   {
     name: "Joan Jett",

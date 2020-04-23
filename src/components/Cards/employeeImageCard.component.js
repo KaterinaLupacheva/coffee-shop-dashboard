@@ -8,7 +8,8 @@ import {
   Button,
   Typography,
   Box,
-  Paper
+  Paper,
+  Divider
 } from "@material-ui/core";
 import { employeeImageCardStyles } from "./employeeImageCard.styles";
 
@@ -38,8 +39,9 @@ const EmployeeImageCard = ({ profile }) => {
             {profile.position}
           </Typography>
         </CardContent>
+        <Divider />
         <CardActions>
-          <Button size="small">Change Image</Button>
+          <Button size="small" variant="contained" className={classes.button}>Change Image</Button>
         </CardActions>
       </Card>
     </Paper>
