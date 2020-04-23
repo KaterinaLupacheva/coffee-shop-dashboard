@@ -6,7 +6,7 @@ import {
   Button,
   FormControlLabel,
   Switch,
-  Box
+  Box,
 } from "@material-ui/core";
 import ActionButtons from "./actionButtons.component";
 import { rightFormStyles } from "./rightForm.styles";
@@ -30,19 +30,17 @@ const RightForm = ({ open, handleClose, data }) => {
       <form className={classes.root} noValidate autoComplete="off">
         <TextField
           id="outlined-basic"
-          placeholder="Name"
+          label="Name"
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           variant="outlined"
-          className={classes.field}
         />
         <TextField
           id="outlined-basic"
-          placeholder="Price"
+          label="Price"
           value={price}
-          onChange={e => setPrice(e.target.value)}
+          onChange={(e) => setPrice(e.target.value)}
           variant="outlined"
-          className={classes.field}
         />
         <input
           accept="image/*"
