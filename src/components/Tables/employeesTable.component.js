@@ -41,7 +41,7 @@ const EmployeesTable = ({ history, match }) => {
   return (
     <>
       <Title>Employees</Title>
-      <Table>
+      <Table className={classes.root}>
         <TableHead>
           <TableRow>
             <TableCell className={classes.head}>Name</TableCell>

@@ -1,5 +1,5 @@
 export const employeesPageStyles = (theme) => ({
   root: {
-    width: "100%",
+    // width: "100%",
   },
 });
