@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { withRouter } from "react-router-dom";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -34,8 +35,9 @@ const rows = createRows();
 
 const useStyles = makeStyles(employeesTableStyles);
 
-const EmployeesTable = () => {
+const EmployeesTable = ({ history, match }) => {
   const classes = useStyles();
+
   return (
     <>
       <Title>Employees</Title>
@@ -54,7 +56,7 @@ const EmployeesTable = () => {
             <TableRow
               key={row.id}
               className={classes.row}
-              onClick={() => console.log("click " + row.id)}
+              onClick={() => history.push(`${match.url}/${row.id}`)}
             >
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.email}</TableCell>
@@ -69,4 +71,4 @@ const EmployeesTable = () => {
   );
 };
 
-export default EmployeesTable;
+export default withRouter(EmployeesTable);
