@@ -1,11 +1,12 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
+import { labels, dailySales } from "../../data/daySales";
 
 const data = {
-  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  labels: labels,
   datasets: [
     {
-      label: "My First dataset",
+      label: "Hourly sales",
       fill: false,
       lineTension: 0.1,
       backgroundColor: "rgba(75,192,192,0.4)",
@@ -23,7 +24,7 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: dailySales,
     },
   ],
 };
