@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import { Line } from "react-chartjs-2";
 import { labels, hourlyVisitors } from "../../data/daySales";
-import Title from "../Tables/title";
-import { Box } from "@material-ui/core";
+import ChartTitle from "./chartTitle.component";
+import { Box, TextField, MenuItem } from "@material-ui/core";
 import { chartStyles } from "./charts.styles";
 
 const useStyles = makeStyles(chartStyles);
@@ -12,6 +12,7 @@ const useStyles = makeStyles(chartStyles);
 const LineChart = () => {
   const classes = useStyles();
   const theme = useTheme();
+  const [type, setType] = useState("Visitors");
 
   const data = {
     labels: labels,
@@ -71,7 +72,31 @@ const LineChart = () => {
 
   return (
     <>
-      <Title>Hourly Visitors</Title>
+      <Box className={classes.options}>
+        <TextField
+          className={classes.select}
+          select
+          name="type"
+          label="Type"
+          size="small"
+          variant="outlined"
+          InputProps={{
+            classes: {
+              input: classes.fieldFontSize,
+            },
+          }}
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+        >
+          <MenuItem key={"Visitors"} value={"Visitors"}>
+            {"Visitors"}
+          </MenuItem>
+          <MenuItem key={"Revenue"} value={"Revenue"}>
+            {"Revenue"}
+          </MenuItem>
+        </TextField>
+      </Box>
+      <ChartTitle>Hourly Visitors</ChartTitle>
       <Box className={classes.container}>
         <Line data={data} width={100} height={250} options={options} />
       </Box>
