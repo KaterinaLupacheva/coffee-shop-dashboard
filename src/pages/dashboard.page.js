@@ -1,11 +1,18 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import LineChart from "../components/Charts/lineChart.component";
+import { Paper } from "@material-ui/core";
+import { dashboardPageStyles } from "./dashboardPage.styles";
+
+const useStyles = makeStyles(dashboardPageStyles);
 
 const DashboardPage = () => {
+  const classes = useStyles();
   return (
     <>
-      <h1>DASHBOARD</h1>
-      <LineChart />
+      <Paper className={classes.root}>
+        <LineChart />
+      </Paper>
     </>
   );
 };
