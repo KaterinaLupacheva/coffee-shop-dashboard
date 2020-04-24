@@ -7,6 +7,7 @@ import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import GroupAddIcon from "@material-ui/icons/GroupAdd";
 
 const useStyles = makeStyles(statCardsStyles);
 
@@ -16,7 +17,7 @@ const StatCards = () => {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Paper className={classes.paper}>
             <div className={classes.topRow}>
               <div>
@@ -31,20 +32,19 @@ const StatCards = () => {
             <div className={classes.bottomRow}>
               <ArrowUpwardIcon fontSize="small" className={classes.green} />
               <Typography variant="body2">
-                &nbsp;<span className={classes.green}>17%</span> Since last
-                month
+                &nbsp;<span className={classes.green}>17%</span> to last month
               </Typography>
             </div>
           </Paper>
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Paper className={classes.paper}>
             <div className={classes.topRow}>
               <div>
                 <Typography variant="button">Average Bill</Typography>
                 <Typography variant="h4">$7.38</Typography>
               </div>
-              <div className={clsx(classes.icon, classes.iconBgGreen)}>
+              <div className={clsx(classes.icon, classes.iconBgOrange)}>
                 <LocalAtmIcon fontSize="large" />
               </div>
             </div>
@@ -52,16 +52,50 @@ const StatCards = () => {
             <div className={classes.bottomRow}>
               <ArrowDownwardIcon fontSize="small" className={classes.red} />
               <Typography variant="body2">
-                &nbsp;<span className={classes.red}>2.3%</span> Since last month
+                &nbsp;<span className={classes.red}>2.3%</span> to last month
               </Typography>
             </div>
           </Paper>
         </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=12</Paper>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+            <div className={classes.topRow}>
+              <div>
+                <Typography variant="button">Net Profit</Typography>
+                <Typography variant="h4">$2,390</Typography>
+              </div>
+              <div className={clsx(classes.icon, classes.iconBgGreen)}>
+                <LocalAtmIcon fontSize="large" />
+              </div>
+            </div>
+            <Divider />
+            <div className={classes.bottomRow}>
+              <ArrowUpwardIcon fontSize="small" className={classes.green} />
+              <Typography variant="body2">
+                &nbsp;<span className={classes.green}>2.3%</span> to last month
+              </Typography>
+            </div>
+          </Paper>
         </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=12</Paper>
+        <Grid item xs={12} sm={6} md={3}>
+          <Paper className={classes.paper}>
+            <div className={classes.topRow}>
+              <div>
+                <Typography variant="button">IG Followers</Typography>
+                <Typography variant="h4">3.287</Typography>
+              </div>
+              <div className={clsx(classes.icon, classes.iconBgDeepPurple)}>
+                <GroupAddIcon fontSize="large" />
+              </div>
+            </div>
+            <Divider />
+            <div className={classes.bottomRow}>
+              <ArrowUpwardIcon fontSize="small" className={classes.green} />
+              <Typography variant="body2">
+                &nbsp;<span className={classes.green}>78</span> to last month
+              </Typography>
+            </div>
+          </Paper>
         </Grid>
       </Grid>
     </div>

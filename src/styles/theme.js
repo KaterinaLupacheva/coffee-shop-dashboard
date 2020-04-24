@@ -1,5 +1,12 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import { teal, green, red, purple } from "@material-ui/core/colors";
+import {
+  teal,
+  green,
+  red,
+  purple,
+  orange,
+  deepPurple,
+} from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
@@ -18,6 +25,8 @@ const theme = createMuiTheme({
       menu: "#3DDAD7",
       tealBg: teal["A400"],
       purpleBg: purple[300],
+      orangeBg: orange["A100"],
+      deepPurpleBg: deepPurple[600],
     },
     text: {
       white: "#fff",

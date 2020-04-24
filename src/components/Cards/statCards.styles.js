@@ -41,4 +41,10 @@ export const statCardsStyles = (theme) => ({
   iconBgPurple: {
     background: theme.palette.background.purpleBg,
   },
+  iconBgOrange: {
+    background: theme.palette.background.orangeBg,
+  },
+  iconBgDeepPurple: {
+    background: theme.palette.background.deepPurpleBg,
+  },
 });
