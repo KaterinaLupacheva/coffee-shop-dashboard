@@ -35,9 +35,13 @@ const LineChart = () => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: hourlyVisitors,
+        data: hourlyVisitors(),
       },
     ],
+  };
+
+  const updateData = () => {
+    data.data = hourlyVisitors();
   };
 
   const options = {
@@ -46,7 +50,7 @@ const LineChart = () => {
         {
           scaleLabel: {
             display: true,
-            labelString: "Visitors",
+            labelString: type,
             fontSize: 18,
           },
         },
@@ -86,7 +90,10 @@ const LineChart = () => {
             },
           }}
           value={type}
-          onChange={(e) => setType(e.target.value)}
+          onChange={(e) => {
+            setType(e.target.value);
+            updateData();
+          }}
         >
           <MenuItem key={"Visitors"} value={"Visitors"}>
             {"Visitors"}
@@ -96,7 +103,7 @@ const LineChart = () => {
           </MenuItem>
         </TextField>
       </Box>
-      <ChartTitle>Hourly Visitors</ChartTitle>
+      <ChartTitle>{`Hourly ${type}`}</ChartTitle>
       <Box className={classes.container}>
         <Line data={data} width={100} height={250} options={options} />
       </Box>
