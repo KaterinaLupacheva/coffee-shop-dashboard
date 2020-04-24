@@ -5,9 +5,9 @@ import { Line } from "react-chartjs-2";
 import { labels, hourlyVisitors } from "../../data/daySales";
 import Title from "../Tables/title";
 import { Box } from "@material-ui/core";
-import { lineChartStyles } from "./lineChart.styles";
+import { chartStyles } from "./charts.styles";
 
-const useStyles = makeStyles(lineChartStyles);
+const useStyles = makeStyles(chartStyles);
 
 const LineChart = () => {
   const classes = useStyles();
@@ -46,6 +46,7 @@ const LineChart = () => {
           scaleLabel: {
             display: true,
             labelString: "Visitors",
+            fontSize: 18,
           },
         },
       ],
@@ -54,6 +55,7 @@ const LineChart = () => {
           scaleLabel: {
             display: true,
             labelString: "Working Hours",
+            fontSize: 18,
           },
         },
       ],
