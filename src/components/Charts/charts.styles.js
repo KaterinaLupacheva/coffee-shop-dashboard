@@ -6,10 +6,12 @@ export const chartStyles = (theme) => ({
   options: {
     display: "flex",
     justifyContent: "flex-start",
+    flexWrap: "wrap",
     padding: theme.spacing(2),
   },
-  select: {
+  field: {
     width: "25ch",
+    margin: theme.spacing(1),
   },
   fieldFontSize: {
     fontSize: 20,

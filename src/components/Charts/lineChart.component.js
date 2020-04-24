@@ -13,6 +13,7 @@ const LineChart = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [type, setType] = useState("Visitors");
+  const [date, setDate] = useState("2020-04-20");
 
   const data = {
     labels: labels,
@@ -78,7 +79,7 @@ const LineChart = () => {
     <>
       <Box className={classes.options}>
         <TextField
-          className={classes.select}
+          className={classes.field}
           select
           name="type"
           label="Type"
@@ -102,6 +103,21 @@ const LineChart = () => {
             {"Revenue"}
           </MenuItem>
         </TextField>
+        <TextField
+          label="Date"
+          type="date"
+          size="small"
+          variant="outlined"
+          className={classes.field}
+          InputLabelProps={{
+            shrink: true,
+          }}
+          value={date}
+          onChange={(e) => {
+            setDate(e.target.value);
+            updateData();
+          }}
+        />
       </Box>
       <ChartTitle>{`Hourly ${type}`}</ChartTitle>
       <Box className={classes.container}>
