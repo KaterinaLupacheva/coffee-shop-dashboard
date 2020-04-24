@@ -6,8 +6,10 @@ export const chartStyles = (theme) => ({
   options: {
     display: "flex",
     justifyContent: "flex-start",
+    alignItems: "center",
     flexWrap: "wrap",
     padding: theme.spacing(2),
+    paddingBottom: 0,
   },
   field: {
     width: "25ch",
@@ -15,5 +17,9 @@ export const chartStyles = (theme) => ({
   },
   fieldFontSize: {
     fontSize: 20,
+    color: theme.palette.primary.main,
+  },
+  dateField: {
+    color: theme.palette.primary.main,
   },
 });

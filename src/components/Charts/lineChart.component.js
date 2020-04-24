@@ -53,6 +53,7 @@ const LineChart = () => {
             display: true,
             labelString: type,
             fontSize: 18,
+            fontColor: theme.palette.primary.main,
           },
         },
       ],
@@ -62,14 +63,12 @@ const LineChart = () => {
             display: true,
             labelString: "Working Hours",
             fontSize: 18,
+            fontColor: theme.palette.primary.main,
           },
         },
       ],
     },
     maintainAspectRatio: false,
-    layout: {
-      padding: 30,
-    },
     legend: {
       display: false,
     },
@@ -112,14 +111,20 @@ const LineChart = () => {
           InputLabelProps={{
             shrink: true,
           }}
+          InputProps={{
+            classes: {
+              input: classes.dateField,
+            },
+          }}
           value={date}
           onChange={(e) => {
             setDate(e.target.value);
             updateData();
           }}
         />
+        <ChartTitle>{`Hourly ${type}`}</ChartTitle>
       </Box>
-      <ChartTitle>{`Hourly ${type}`}</ChartTitle>
+
       <Box className={classes.container}>
         <Line data={data} width={100} height={250} options={options} />
       </Box>

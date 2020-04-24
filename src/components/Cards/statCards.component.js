@@ -1,12 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
 import { Grid, Paper, Typography, Divider } from "@material-ui/core";
 import { statCardsStyles } from "./statCards.styles";
 import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import MoneyIcon from "@material-ui/icons/Money";
 import GroupAddIcon from "@material-ui/icons/GroupAdd";
 
 const useStyles = makeStyles(statCardsStyles);
@@ -24,7 +24,7 @@ const StatCards = () => {
                 <Typography variant="button">Total Visitors</Typography>
                 <Typography variant="h4">1,264</Typography>
               </div>
-              <div className={clsx(classes.icon, classes.iconBgPurple)}>
+              <div className={classes.icon}>
                 <PeopleOutlineIcon fontSize="large" />
               </div>
             </div>
@@ -44,7 +44,7 @@ const StatCards = () => {
                 <Typography variant="button">Average Bill</Typography>
                 <Typography variant="h4">$7.38</Typography>
               </div>
-              <div className={clsx(classes.icon, classes.iconBgOrange)}>
+              <div className={classes.icon}>
                 <LocalAtmIcon fontSize="large" />
               </div>
             </div>
@@ -64,8 +64,8 @@ const StatCards = () => {
                 <Typography variant="button">Net Profit</Typography>
                 <Typography variant="h4">$2,390</Typography>
               </div>
-              <div className={clsx(classes.icon, classes.iconBgGreen)}>
-                <LocalAtmIcon fontSize="large" />
+              <div className={classes.icon}>
+                <MoneyIcon fontSize="large" />
               </div>
             </div>
             <Divider />
@@ -84,7 +84,7 @@ const StatCards = () => {
                 <Typography variant="button">IG Followers</Typography>
                 <Typography variant="h4">3.287</Typography>
               </div>
-              <div className={clsx(classes.icon, classes.iconBgDeepPurple)}>
+              <div className={classes.icon}>
                 <GroupAddIcon fontSize="large" />
               </div>
             </div>
