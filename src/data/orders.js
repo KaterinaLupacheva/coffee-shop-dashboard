@@ -44,6 +44,6 @@ export const orders = [
       "4 Croissants",
       "2 Chocolate Cakes",
     ],
-    sum: "$29",
+    sum: "$29.00",
   },
 ];
