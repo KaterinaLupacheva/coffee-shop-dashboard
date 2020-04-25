@@ -5,6 +5,7 @@ import BarChart from "../components/Charts/barChart.component";
 import { Paper } from "@material-ui/core";
 import { dashboardPageStyles } from "./dashboardPage.styles";
 import StatCards from "../components/Cards/statCards.component";
+import DeliveryOrdersTable from '../components/Tables/deliveryOrdersTable.component';
 
 const useStyles = makeStyles(dashboardPageStyles);
 
@@ -18,6 +19,9 @@ const DashboardPage = () => {
       </Paper>
       <Paper className={classes.root} elevation={5}>
         <BarChart />
+      </Paper>
+      <Paper className={classes.root} elevation={5}>
+        <DeliveryOrdersTable />
       </Paper>
     </>
   );
