@@ -8,7 +8,7 @@ import {
   TableRow,
   Hidden,
 } from "@material-ui/core";
-import Title from "./title";
+import ChartTitle from "../Charts/chartTitle.component";
 import { orders } from "../../data/deliveryOrders";
 import { employeesTableStyles } from "./employeesTable.styles";
 
@@ -33,8 +33,8 @@ const DeliveryOrdersTable = ({ history, match }) => {
 
   return (
     <>
-      <Title>Delivery Orders</Title>
-      <Table className={classes.root}>
+      <ChartTitle>Delivery Orders</ChartTitle>
+      <Table className={classes.root} size="small">
         <TableHead>
           <TableRow>
             <TableCell className={classes.head}>ID</TableCell>

@@ -22,4 +22,12 @@ export const chartStyles = (theme) => ({
   dateField: {
     color: theme.palette.primary.main,
   },
+  legend: {
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: theme.spacing(2),
+  },
+  legendItem: {
+    padding: theme.spacing(1),
+  },
 });

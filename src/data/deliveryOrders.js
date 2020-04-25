@@ -33,6 +33,6 @@ export const orders = [
     id: "odr5677",
     customer: "Audrey Bentley",
     date: "2020-04-28",
-    address: "125 Middle River Court, Merrillville, IN 46410",
+    address: "8732 S. Harvard Lane, North Attleboro, MA 02760",
   },
 ];
