@@ -6,7 +6,7 @@ export const statCardsStyles = (theme) => ({
   paper: {
     padding: theme.spacing(1),
     textAlign: "center",
-    color: theme.palette.primary.main
+    color: theme.palette.primary.main,
   },
   topRow: {
     height: "15vh",
@@ -21,7 +21,7 @@ export const statCardsStyles = (theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: theme.palette.background.card
+    background: theme.palette.background.card,
   },
   bottomRow: {
     display: "flex",
@@ -32,8 +32,10 @@ export const statCardsStyles = (theme) => ({
   },
   green: {
     color: theme.palette.text.green,
+    fontSize: "1.5rem",
   },
   red: {
     color: theme.palette.text.red,
+    fontSize: "1.5rem",
   },
 });

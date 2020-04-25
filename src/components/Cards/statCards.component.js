@@ -30,7 +30,7 @@ const StatCards = () => {
             </div>
             <Divider />
             <div className={classes.bottomRow}>
-              <ArrowUpwardIcon fontSize="small" className={classes.green} />
+              <ArrowUpwardIcon className={classes.green} />
               <Typography variant="body2">
                 &nbsp;<span className={classes.green}>17%</span> to last month
               </Typography>
