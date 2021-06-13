@@ -10,8 +10,10 @@ import OrdersPage from "./pages/orders.page";
 import EmployeesPage from "./pages/employees.page";
 import ProductsPage from "./pages/products.page";
 import AppBarWithSidebar from "./components/MainLayout/appBarWithSidebar.component";
+import useViewCounter from "./useViewCounter.hook";
 
 function App() {
+  useViewCounter();
   return (
     <Router>
       <ThemeProvider theme={theme}>
